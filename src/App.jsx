@@ -1,9 +1,12 @@
-import { useState } from 'react'
-import './App.css'
-
+import { useState } from 'react' /* hook that lets us track which section is active */
+import './App.css' /* import main CSS file for styling */
+/* Main App component */
 function App() {
-  const [activeSection, setActiveSection] = useState('about')
-
+  const [activeSection, setActiveSection] = useState('about') /*variable ActiveSection tracks which nav item is clicked, 
+  setActiveSection updates it, about is the starting value */
+  
+  /* const projects - creates and array of project objects, includes the information for each project, it is later generated to project cards */
+  
   const projects = [
     {
       title: "Plot Twist",
@@ -37,6 +40,8 @@ function App() {
     }
   ]
 
+  /* const skills - creates an object with defined category of skills, each category has an array of skill names */
+  
   const skills = {
     frontend: ["HTML5", "CSS3", "JavaScript", "React", "Responsive Design"],
     backend: ["Python", "Django", "Django REST Framework", "PostgreSQL", "RESTful APIs"],
@@ -44,9 +49,10 @@ function App() {
     other: ["Agile/Scrum", "Project Management", "Stakeholder Communication", "Problem Solving"]
   }
 
+/* return - what the component renders, includes multiple sections like nav, hero, about me, projects, skills, contact, footer */
   return (
     <div className="app">
-      {/* Navigation */}
+      {/* Navigation - creates sticky navigation bar at top of page */}
       <nav className="nav">
         <div className="nav-container">
           <h1 className="logo">Tamala Healy</h1>
@@ -59,8 +65,10 @@ function App() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section id="about" className="hero">
+      {/* Hero Sectiont with call to action buttons, and the span className="hero-tak" which will render the 
+      contains info for buttons"Hello I'm" badge" and social links, terget =blank opens in a new tab, 
+      rel=noopenernoreferrer - security for external links, svg - social icons */}
+      <section id="about" className="hero"> {}
         <div className="hero-content">
           <div className="hero-text">
             <span className="hero-tag">👋 Hello! I'm</span>
@@ -98,7 +106,7 @@ function App() {
         </div>
       </section>
 
-      {/* About Me Section */}
+      {/* About Me Section, intro, education and career*/}
       <section className="about">
         <div className="container">
           <div className="about-grid">
@@ -147,7 +155,9 @@ function App() {
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Projects Section - projects.map - loops through each project array. Project,index - current project and its position
+      number. key=index - unique it key for each item for react to process, project.title - inserts project title,
+      prokject highlights&& - only shows section IF highlights exist ({condition&& <Component/> is common in react*/}
       <section id="projects" className="projects">
         <div className="container">
           <h2 className="section-title">Featured Projects</h2>
@@ -297,3 +307,4 @@ function App() {
 }
 
 export default App
+/* makes the app component available for import in other files. main.jsx imports this to display the website*/

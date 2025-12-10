@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap');
 
+/* root applies to the entire document, creates reusable css variable used with var(--colour) */
+
 :root {
   --deep-blue: #1E3A5F;
   --ocean-blue: #2D5A87;
@@ -30,6 +32,7 @@
   --shadow-glow: 0 0 40px rgba(0, 229, 255, 0.4);
 }
 
+/* universal reset and base styles * selectes all elements, removes default margins/padding, box-sizing makes sizing more predictable */
 * {
   margin: 0;
   padding: 0;
@@ -40,6 +43,8 @@ html {
   scroll-behavior: smooth;
 }
 
+/* sets default fonts, creates the diagonal gradient background sets default text colour to white*/
+
 body {
   font-family: var(--font-body);
   background: linear-gradient(135deg, var(--deep-blue) 0%, var(--ocean-blue) 100%);
@@ -47,6 +52,9 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
+
+/* before - creates a pseudo-element, position: fixed stays in place when scrolling, multiple faadial-gradient 
+creates the floating colour orbs, animation - makes them slowly pulse/move */
 
 body::before {
   content: '';
@@ -63,6 +71,8 @@ body::before {
   z-index: 0;
   animation: gradientShift 20s ease-in-out infinite;
 }
+
+/* @keyframes - defines animation steps, float makes the animation bob up and down, rotate makes the avatar border spin*/
 
 @keyframes gradientShift {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -88,6 +98,8 @@ body::before {
   from { transform: translateY(-100%); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+/* display:flex - enables flexbox layout, justify-content space between pushes items to the opposite ends, 
+align items centre - verctically centres items*/
 
 .nav-container {
   max-width: 1200px;
@@ -157,6 +169,9 @@ body::before {
   position: relative;
   overflow: hidden;
 }
+
+/* display grid enables css grid, grid template columns - creates two columns with the left 
+slightly wider, gap space between grid items*/
 
 .hero-content {
   max-width: 1200px;
@@ -453,6 +468,9 @@ body::before {
   transition: transform 0.4s ease;
 }
 
+/* :hover - applies when mouse is ove the element, transform translate - brings it to the foreground, 
+box shadow - adds glowing shadow */
+
 .project-card:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: var(--bright-cyan);
@@ -740,6 +758,9 @@ body::before {
     font-size: 0.9rem;
   }
 }
+
+/* changes grid to single column on tablets, makes avatar smaller, 
+makes the site look good on mobile, for screens smaller than 968px*/
 
 @media (max-width: 640px) {
   .hero-title {
