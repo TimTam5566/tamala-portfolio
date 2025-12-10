@@ -291,6 +291,7 @@ body::before {
   color: var(--warm-white);
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  cursor: pointer;
 }
 
 .social-link:hover {
@@ -651,6 +652,7 @@ body::before {
   color: var(--warm-white);
   backdrop-filter: blur(10px);
   transition: all 0.4s ease;
+  cursor: pointer;
 }
 
 .contact-card:hover {
