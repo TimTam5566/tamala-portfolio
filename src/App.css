@@ -760,6 +760,7 @@ box shadow - adds glowing shadow */
 }
 
 /* changes grid to single column on tablets, makes avatar smaller, 
+
 makes the site look good on mobile, for screens smaller than 968px*/
 
 @media (max-width: 640px) {
