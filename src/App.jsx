@@ -9,7 +9,7 @@ function App() {
       title: "Plot Twist",
       description: "A collaborative storytelling platform where users create stories and others contribute plot developments through creative 'pledges'. Built as my She Codes Plus final project.",
       role: "Solo Developer",
-      tech: ["React", "Django REST Framework", "PostgreSQL", "Heroku", "Netlify", "Cloudinary"],
+      tech: ["React", "Django REST Framework", "SQLite", "Heroku", "Netlify", "Cloudinary"],
       liveLink: "https://plottwistyouaretheauthor.netlify.app",
       githubFrontend: "https://github.com/TimTam5566/plottwist_front_end",
       githubBackend: "https://github.com/TimTam5566/plottwist_back_end",
@@ -25,7 +25,7 @@ function App() {
       title: "Save Point",
       description: "A collaborative retrospective board tool for agile teams. Create customizable retro boards, manage action items, and track team progress.",
       role: "Project Manager & Quality Assurance",
-      tech: ["React", "Django", "PostgreSQL", "Netlify", "Agile Methodologies"],
+      tech: ["React", "Django", "Django Channels", "PostgreSQL", "Redis", "Netlify", "Heroku", "Agile Methodologies"],
       liveLink: "https://save-point.netlify.app/",
       responsibilities: [
         "Project management and timeline coordination",
@@ -54,9 +54,10 @@ function App() {
   ]
 
   const skills = {
-    frontend: ["HTML5", "CSS3", "JavaScript", "React", "Responsive Design"],
-    backend: ["Python", "Django", "Django REST Framework", "PostgreSQL", "RESTful APIs"],
-    tools: ["Git", "GitHub", "VS Code", "Heroku", "Netlify", "Cloudinary"],
+    frontend: ["HTML5", "CSS3", "JavaScript", "React", "React Native", "Responsive Design"],
+    backend: ["Python", "Django", "Django REST Framework", "Django Channels", "SQLite", "PostgreSQL", "Redis", "RESTful APIs"],
+    tools: ["Git", "GitHub", "VS Code", "Vite", "Insomnia", "Heroku", "Netlify", "Cloudinary"],
+    hardware: ["MicroPython", "Raspberry Pi", "Sensor Integration", "LED Programming"],
     other: ["Agile/Scrum", "Project Management", "Stakeholder Communication", "Problem Solving"]
   }
 
@@ -265,6 +266,14 @@ function App() {
               </div>
             </div>
             <div className="skill-category">
+              <h3>Hardware & Embedded</h3>
+              <div className="skill-tags">
+                {skills.hardware.map((skill, i) => (
+                  <span key={i} className="skill-tag">{skill}</span>
+                ))}
+              </div>
+            </div>
+            <div className="skill-category">
               <h3>Professional Skills</h3>
               <div className="skill-tags">
                 {skills.other.map((skill, i) => (
@@ -309,7 +318,7 @@ function App() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2024 Tamala Healy. Built with React.</p>
+          <p>&copy; 2025 Tamala Healy. Built with React.</p>
           <p>Perth, Western Australia</p>
         </div>
       </footer>
@@ -318,4 +327,3 @@ function App() {
 }
 
 export default App
-
