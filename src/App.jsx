@@ -1,12 +1,9 @@
-import { useState } from 'react' /* hook that lets us track which section is active */
-import './App.css' /* import main CSS file for styling */
-/* Main App component */
+import { useState } from 'react'
+import './App.css'
+
 function App() {
-  const [activeSection, setActiveSection] = useState('about') /*variable ActiveSection tracks which nav item is clicked, 
-  setActiveSection updates it, about is the starting value */
-  
-  /* const projects - creates and array of project objects, includes the information for each project, it is later generated to project cards */
-  
+  const [activeSection, setActiveSection] = useState('about')
+
   const projects = [
     {
       title: "Plot Twist",
@@ -40,8 +37,6 @@ function App() {
     }
   ]
 
-  /* const skills - creates an object with defined category of skills, each category has an array of skill names */
-  
   const skills = {
     frontend: ["HTML5", "CSS3", "JavaScript", "React", "Responsive Design"],
     backend: ["Python", "Django", "Django REST Framework", "PostgreSQL", "RESTful APIs"],
@@ -49,10 +44,9 @@ function App() {
     other: ["Agile/Scrum", "Project Management", "Stakeholder Communication", "Problem Solving"]
   }
 
-/* return - what the component renders, includes multiple sections like nav, hero, about me, projects, skills, contact, footer */
   return (
     <div className="app">
-      {/* Navigation - creates sticky navigation bar at top of page */}
+      {/* Navigation */}
       <nav className="nav">
         <div className="nav-container">
           <h1 className="logo">Tamala Healy</h1>
@@ -65,19 +59,17 @@ function App() {
         </div>
       </nav>
 
-      {/* Hero Sectiont with call to action buttons, and the span className="hero-tak" which will render the 
-      contains info for buttons"Hello I'm" badge" and social links, terget =blank opens in a new tab, 
-      rel=noopenernoreferrer - security for external links, svg - social icons */}
-      <section id="about" className="hero"> {}
+      {/* Hero Section with call to action buttons, social links, and intro badge */}
+      <section id="about" className="hero">
         <div className="hero-content">
           <div className="hero-text">
             <span className="hero-tag">👋 Hello! I'm</span>
             <h1 className="hero-title">Tamala Healy</h1>
-            <h2 className="hero-subtitle">Full-Stack Developer | Project Coordinator</h2>
+            <h2 className="hero-subtitle">Full-Stack Developer | She Codes Plus Graduate</h2>
             <p className="hero-description">
-              Transitioning into tech after 20+ years in operations and stakeholder coordination. 
-              Recent <strong>She Codes Plus</strong> graduate with hands-on experience building 
-              full-stack applications using React, Python, and Django.
+              Career-transitioning Software Developer with a background in structured, compliance-driven industries. Recently completed the She Codes Plus program,
+              building and deploying full-stack applications using React, JavaScript, Python and Django. Experienced in collaborative project delivery, stakeholder
+              coordination and building reliable systems that operate under real-world constraints
             </p>
             <div className="hero-buttons">
               <a href="#projects" className="btn btn-primary">View Projects</a>
@@ -86,14 +78,14 @@ function App() {
               </a>
             </div>
             <div className="social-links">
-              <a href="https://github.com/TimTam5566" target="_blank" 
-                  rel="noopener noreferrer" className="social-link" title="GitHub">
+              <a href="https://github.com/TimTam5566" target="_blank"
+                rel="noopener noreferrer" className="social-link" title="GitHub">
                 <svg viewBox="0 0 24 24" width="24" height="24">
                   <path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
               </a>
-              <a href="https://www.linkedin.com/in/tamala-healy" target="_blank" 
-                  rel="noopener noreferrer" className="social-link" title="LinkedIn">
+              <a href="https://www.linkedin.com/in/tamala-healy" target="_blank"
+                rel="noopener noreferrer" className="social-link" title="LinkedIn">
                 <svg viewBox="0 0 24 24" width="24" height="24">
                   <path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
@@ -106,58 +98,59 @@ function App() {
         </div>
       </section>
 
-      {/* About Me Section, intro, education and career*/}
+      {/* About Me Section */}
       <section className="about">
         <div className="container">
           <div className="about-grid">
             <div className="about-text">
               <h2 className="section-title">About Me</h2>
               <p>
-                With a background spanning psychology, operations management, and service coordination, 
-                I bring a unique perspective to software development. My 20+ years of experience includes 
-                mining operations at MRL, disability services coordination, and business management.
+                With a background spanning psychology, operations management and service coordination,
+                I bring structured thinking and systems awareness to software development. My experience
+                working in regulated environments has shaped the way I approach engineering — with care,
+                accountability and a strong focus on reliability.
               </p>
               <p>
-                I recently completed the <strong>She Codes Plus program</strong>, where I built full-stack 
-                applications using modern web technologies. This intensive bootcamp reinforced my passion 
-                for creating solutions that solve real problems while being accessible and user-friendly.
+                I recently completed the <strong>She Codes Plus program</strong>, where I built and deployed
+                full-stack applications using React, JavaScript, Python and Django. Through collaborative
+                projects and independent builds, I developed hands-on experience in API design, relational
+                databases and modern deployment workflows.
               </p>
               <p>
-                I'm particularly interested in roles that combine technical skills with stakeholder 
-                management and user-centered design. My experience coordinating complex projects across 
-                diverse teams translates well to technical project management and customer success roles.
+                I'm particularly interested in building secure, scalable systems that solve real problems
+                and operate effectively under real-world constraints. I enjoy collaborating within technical
+                teams, translating user needs into structured solutions and continuously expanding my
+                engineering capability.
               </p>
             </div>
             <div className="about-highlights">
               <div className="highlight-card">
                 <span className="highlight-icon">🎓</span>
                 <h3>Education</h3>
-                <p>She Codes Plus Graduate (2024)</p>
-                <p>Bachelor of Arts - Psychology</p>
+                <p>She Codes Plus Graduate (2025)</p>
+                <p>Bachelor of Arts – Psychology</p>
                 <p>Advanced Diploma of Accounting</p>
               </div>
               <div className="highlight-card">
                 <span className="highlight-icon">💼</span>
-                <h3>Experience</h3>
-                <p>20+ years in operations</p>
+                <h3>Professional Background</h3>
+                <p>Regulated & compliance-driven industries</p>
                 <p>Mining sector (MRL)</p>
-                <p>Service coordination</p>
+                <p>Complex stakeholder environments</p>
               </div>
               <div className="highlight-card">
                 <span className="highlight-icon">🎯</span>
-                <h3>Focus Areas</h3>
-                <p>Full-stack development</p>
-                <p>Project coordination</p>
-                <p>Stakeholder management</p>
+                <h3>Engineering Focus</h3>
+                <p>Full-stack development (React & Django)</p>
+                <p>API design & relational databases</p>
+                <p>Secure & scalable systems</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Projects Section - projects.map - loops through each project array. Project,index - current project and its position
-      number. key=index - unique it key for each item for react to process, project.title - inserts project title,
-      prokject highlights&& - only shows section IF highlights exist ({condition&& <Component/> is common in react*/}
+      {/* Projects Section */}
       <section id="projects" className="projects">
         <div className="container">
           <h2 className="section-title">Featured Projects</h2>
@@ -169,7 +162,6 @@ function App() {
                   <span className="project-role">{project.role}</span>
                 </div>
                 <p className="project-description">{project.description}</p>
-                
                 {project.highlights && (
                   <div className="project-highlights">
                     <h4>Key Features:</h4>
@@ -180,7 +172,6 @@ function App() {
                     </ul>
                   </div>
                 )}
-                
                 {project.responsibilities && (
                   <div className="project-highlights">
                     <h4>My Responsibilities:</h4>
@@ -191,29 +182,27 @@ function App() {
                     </ul>
                   </div>
                 )}
-                
                 <div className="project-tech">
                   {project.tech.map((tech, i) => (
                     <span key={i} className="tech-tag">{tech}</span>
                   ))}
                 </div>
-                
                 <div className="project-links">
                   {project.liveLink && (
-                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" 
-                        className="project-link">
+                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer"
+                      className="project-link">
                       Live Demo →
                     </a>
                   )}
                   {project.githubFrontend && (
-                    <a href={project.githubFrontend} target="_blank" rel="noopener noreferrer" 
-                        className="project-link">
+                    <a href={project.githubFrontend} target="_blank" rel="noopener noreferrer"
+                      className="project-link">
                       Frontend Code →
                     </a>
                   )}
                   {project.githubBackend && (
-                    <a href={project.githubBackend} target="_blank" rel="noopener noreferrer" 
-                        className="project-link">
+                    <a href={project.githubBackend} target="_blank" rel="noopener noreferrer"
+                      className="project-link">
                       Backend Code →
                     </a>
                   )}
@@ -270,7 +259,7 @@ function App() {
         <div className="container">
           <h2 className="section-title">Let's Connect</h2>
           <p className="contact-text">
-            I'm currently seeking opportunities in full-stack development, technical project coordination, 
+            I'm currently seeking opportunities in full-stack development, technical project coordination,
             or customer success roles. Let's connect!
           </p>
           <div className="contact-methods">
@@ -279,14 +268,14 @@ function App() {
               <h3>Email</h3>
               <p>tamala556@gmail.com</p>
             </a>
-            <a href="https://www.linkedin.com/in/tamala-healy" target="_blank" 
-                rel="noopener noreferrer" className="contact-card">
+            <a href="https://www.linkedin.com/in/tamala-healy" target="_blank"
+              rel="noopener noreferrer" className="contact-card">
               <span className="contact-icon">💼</span>
               <h3>LinkedIn</h3>
               <p>Connect with me</p>
             </a>
-            <a href="https://github.com/TimTam5566" target="_blank" 
-                rel="noopener noreferrer" className="contact-card">
+            <a href="https://github.com/TimTam5566" target="_blank"
+              rel="noopener noreferrer" className="contact-card">
               <span className="contact-icon">👩‍💻</span>
               <h3>GitHub</h3>
               <p>View my code</p>
@@ -307,4 +296,3 @@ function App() {
 }
 
 export default App
-/* makes the app component available for import in other files. main.jsx imports this to display the website*/
