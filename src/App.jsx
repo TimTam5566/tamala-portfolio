@@ -329,8 +329,9 @@ function App() {
           <div className="container">
             <h2 className="section-title">Let's Connect</h2>
             <p className="contact-text">
-              I'm currently seeking opportunities in full-stack development, technical project coordination,
-              or customer success roles. Let's connect!
+              I’m currently seeking opportunities as a Junior Software Engineer or Full-Stack Developer, 
+              where I can apply my full-stack capability and continue growing within a high-performing 
+              engineering environment. Let’s connect.
             </p>
             <div className="contact-methods">
               <a href="mailto:tamala556@gmail.com" className="contact-card" aria-label="Email tamala556@gmail.com">
