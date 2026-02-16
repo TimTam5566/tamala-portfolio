@@ -1,18 +1,52 @@
-# React + Vite
+# Tamala Healy — Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio application built with React and Vite to showcase my projects, technical skills and professional background.
 
-Currently, two official plugins are available:
+🔗 **Live Site:** [tamalahealy.netlify.app](https://tamalahealy.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About
 
-## React Compiler
+This portfolio was designed and developed from scratch to present my work as a full-stack developer transitioning from structured, compliance-driven industries into software engineering. It highlights projects built during and after the She Codes Plus program (2025).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Responsive single-page application
+- Smooth scroll navigation
+- Dynamic project cards rendered from data
+- Downloadable resume
+- Mobile-friendly layout
+- Accessible semantic HTML structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Tamala Healy Portfolio - Code Explanation Guide
+## Tech Stack
 
+| Category | Technologies |
+|----------|-------------|
+| **Framework** | React |
+| **Build Tool** | Vite |
+| **Language** | JavaScript |
+| **Styling** | CSS |
+| **Deployment** | Netlify |
+| **Version Control** | Git & GitHub |
+
+## Featured Projects
+
+- **Plot Twist** — Full-stack storytelling platform (React, Django REST Framework, SQLite, Cloudinary)
+- **Save Point** — Team retrospective board tool (React, Django, Django Channels, PostgreSQL, Redis)
+- **Project Sparkle** — Hardware-integrated interactive dress (MicroPython, Raspberry Pi)
+
+## Getting Started
+
+To run this project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/TimTam5566/tamala-portfolio.git
+
+# Navigate into the project
+cd tamala-portfolio
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
