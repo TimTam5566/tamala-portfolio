@@ -129,7 +129,7 @@ function App() {
               </p>
               <div className="hero-buttons">
                 <a href="#projects" className="btn btn-primary">View Projects</a>
-                <a href="/Tamala_Healy_Resume_Technical.pdf" download className="btn btn-secondary" aria-label="Download Resume (PDF)">
+                <a href="/Tamala-Healy-Resume-Technical.pdf" download className="btn btn-secondary" aria-label="Download Resume (PDF)">
                   Download Resume
                 </a>
               </div>
