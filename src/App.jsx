@@ -34,6 +34,22 @@ function App() {
         "Team collaboration and communication",
         "Feature prioritization and scope management"
       ]
+    },
+    {
+      title: "Project Sparkle",
+      description: "A hardware-integrated interactive dress built for a live showcase for the founder of She Codes. Programmed LED light strips and a pixel matrix display using MicroPython on Raspberry Pi, with event-triggered interactions via distance sensors. Delivered under fixed launch deadlines.",
+      role: "Technical Coordinator & Hardware Developer",
+      tech: ["MicroPython", "Raspberry Pi", "Programmable Hardware", "LED Integration", "Sensor Programming"],
+      githubLink: "https://github.com/j4ckofalltrades/project-sparkle",
+      highlights: [
+        "Led coordination across a small technical team, mentors and external collaborators",
+        "Programmed MicroPython scripts to control LED light strips and 8x32 pixel matrix display",
+        "Integrated distance sensor for event-triggered interaction",
+        "Managed hardware assembly including wiring and 20,000mAh power supply integration",
+        "Collaborated with external production partner (Made APT) to align hardware with garment design",
+        "Diagnosed and resolved critical system glitch 10 minutes prior to live showcase",
+        "Successfully delivered fully functional interactive product under live demonstration conditions"
+      ]
     }
   ]
 
@@ -206,6 +222,12 @@ function App() {
                       Backend Code →
                     </a>
                   )}
+                  {project.githubLink && (
+                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer"
+                      className="project-link">
+                      GitHub Repo →
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
@@ -296,3 +318,4 @@ function App() {
 }
 
 export default App
+
